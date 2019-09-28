@@ -20,8 +20,9 @@ int main()
 
 //Another simple way to convert
   int hexa = 0x9ef;
-  cout << endl << "0x" << hex << i;
-  cout << endl << dec << hexa;
+  //Here i tried to padding the output, Y is Padding 
+  cout << endl << setfill('Y') << setw(20) << "0x"  << hex << i;
+  cout << endl << left <<  setfill('Y') << setw(20) << dec << hexa;
 
   return 0;
 }
