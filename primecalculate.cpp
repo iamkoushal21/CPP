@@ -78,13 +78,26 @@ int main() {
         for (j = 1; j * i <= N; j++) {
             if (lp[i*j] == 1) {
                 lp[i*j] = i;
-
             }
         }
     }
   }
 
   cout << lp[N] << " " << lp[N-1];
+
+  //For Highest Prime Factor of A Number - It will compute for all numbers till this N
+  int hp[N+1];
+  for (i = 0; i <= N; i++) {
+	    hp[i] = 1;
+	}
+  for (i = 2; i <= N; i++) {
+    if (hp[i] == 1) {
+        for (j = 1; j * i <= N; j++) {
+                hp[i*j] = i;
+            }
+    }
+  }
+  cout << endl << hp[N] << " " << hp[N-1];
 
 	return 0;
 }
