@@ -115,5 +115,19 @@ int main() {
     }
   }
   cout << endl << pf[N] << " " << pf[N-1];
-	return 0;
+
+
+  // For No. of Prime factors of A number - It will compute for all numbers till this N
+  int Af[N+1];
+  for (i = 0; i <= N; i++) {
+      Af[i] = 0;
+	}
+  for (i = 1; i <= N; i++) {
+        for (j = 1; j * i <= N; j++) {
+                Af[i*j]++;
+        }
+  }
+  cout << endl << Af[N] << " " << Af[N-1];
+
+  return 0;
 }
