@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -83,7 +84,7 @@ int main() {
     }
   }
 
-  cout << lp[N] << " " << lp[N-1];
+  cout << lp[N] << " " << lp[N-1] << "  Least PF";
 
   //For Highest Prime Factor of A Number - It will compute for all numbers till this N
   int hp[N+1];
@@ -97,7 +98,7 @@ int main() {
             }
     }
   }
-  cout << endl << hp[N] << " " << hp[N-1];
+  cout << endl << hp[N] << " " << hp[N-1] << "   Highest PF";
 
 
   // For No. of Prime factors of A number - It will compute for all numbers till this N
@@ -114,20 +115,27 @@ int main() {
         }
     }
   }
-  cout << endl << pf[N] << " " << pf[N-1];
+  cout << endl << pf[N] << " " << pf[N-1] << "   No. of PF";
 
 
-  // For No. of Prime factors of A number - It will compute for all numbers till this N
+  // For No. of all factors of A number - It will compute for all numbers till this N as wll as abc will be set of all factors
   int Af[N+1];
+  vector <vector<int> > abc(N+1);
+
   for (i = 0; i <= N; i++) {
       Af[i] = 0;
 	}
   for (i = 1; i <= N; i++) {
         for (j = 1; j * i <= N; j++) {
                 Af[i*j]++;
+                abc[i*j].push_back(i);
         }
   }
-  cout << endl << Af[N] << " " << Af[N-1];
+  cout << endl << Af[N] << " " << Af[N-1] << "   No. of All Factors" << endl;
+  vector <int> :: iterator it;
+  for (it = abc[N].begin(); it != abc[N].end(); it++) {
+    cout << *it << " ";
+  }
 
   return 0;
 }
