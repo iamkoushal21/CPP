@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int main() 
+int main()
 {
 	int arr[50];
 	int n;
@@ -17,7 +17,7 @@ int main()
 	while (l < r) {
        		while (arr[l] == 0 && l < r) {
 			l++;
-		}	
+		}
 		while (arr[r] == 1 && l < r) {
 			r--;
 		}
@@ -29,7 +29,7 @@ int main()
 		}
 	}
 	for (i = 0; i < n; i++) {
-		cout << arr[i];
+		cout << arr[i] << " ";
 	}
 
 	return 0;
