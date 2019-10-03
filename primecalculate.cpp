@@ -2,25 +2,26 @@
 
 using namespace std;
 
-int primecount(int L, int R, int arr[]) 
+// Between Two Numbers how many Primes available
+int primecount(int L, int R, int arr[])
 {
     int i, count = 0;
     for (i = L; i <= R; i++) {
 	    if (arr[i] == 1) {
 	        count++;
 	    }
-	}    
-	
+	}
+
 	return count;
 }
 
-void isPrime(int n) 
+void isPrime(int n)
 {
 	int i;
 	for (i = 2; i*i <= n; i++) {
 		if (n%i == 0) {
 			printf("FALSE- NO PRIME");
-			
+
 			return;
 		}
 	}
@@ -34,10 +35,13 @@ int main() {
 	cin >> N;
 	int arr[N+1];
 	for (i = 0; i <= N; i++) {
-	    arr[i] = 1;   
+	    arr[i] = 1;
 	}
 	arr[0] = 0;
 	arr[1] = 0;
+
+
+  // SiEVEEEEEE
 	for (i = 2; i*i <= N; i++) {
 	    if (arr[i] == 1) {
 	        for (j = i * i; j <= N; j += i) {
