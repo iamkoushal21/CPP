@@ -41,7 +41,7 @@ int main() {
 	arr[1] = 0;
 
 
-  // SiEVEEEEEE
+  // SiEVEEEEEE for All prime calculation till N so that in queries section it can be in O(1), just see that it is 1-P or 0-NP  .
 
   //ONE APPROACH complexity is same almost but simple to understand
   // for (i = 2; i <= N; i++) {
@@ -83,6 +83,7 @@ int main() {
         }
     }
   }
+
   cout << lp[N] << " " << lp[N-1];
 
 	return 0;
