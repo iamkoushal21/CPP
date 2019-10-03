@@ -99,5 +99,21 @@ int main() {
   }
   cout << endl << hp[N] << " " << hp[N-1];
 
+
+  // For No. of Prime factors of A number - It will compute for all numbers till this N
+  int pf[N+1];
+  for (i = 0; i <= N; i++) {
+	    arr[i] = 1;
+      pf[i] = 0;
+	}
+  for (i = 2; i <= N; i++) {
+    if (arr[i] == 1) {
+        for (j = 1; j * i <= N; j++) {
+                arr[i*j] = 0;
+                pf[i*j]++;
+        }
+    }
+  }
+  cout << endl << pf[N] << " " << pf[N-1];
 	return 0;
 }
