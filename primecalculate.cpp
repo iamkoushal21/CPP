@@ -42,17 +42,48 @@ int main() {
 
 
   // SiEVEEEEEE
-	for (i = 2; i*i <= N; i++) {
-	    if (arr[i] == 1) {
-	        for (j = i * i; j <= N; j += i) {
-	            arr[j] = 0;
-	        }
-	    }
+
+  //ONE APPROACH complexity is same almost but simple to understand
+  // for (i = 2; i <= N; i++) {
+  //   if (arr[i] == 1) {
+  //       for (j = 1; j * i <= N; j++) {
+  //           arr[i*j] = 0;
+  //       }
+  //   }
+  // }
+
+  // Second Approach
+  // for (i = 2; i*i <= N; i++) {
+	//     if (arr[i] == 1) {
+	//         for (j = i * i; j <= N; j += i) {
+	//             arr[j] = 0;
+	//         }
+	//     }
+	// }
+  //
+  //
+	// cin >> L >> R;
+	// cout << primecount(L,R, arr) << endl;
+	// cin >> num;
+	// isPrime(num);
+  //
+
+  //For Least Prime Factor of A Number - It will compute for all numbers till this N
+  int lp[N+1];
+  for (i = 0; i <= N; i++) {
+	    lp[i] = 1;
 	}
-	cin >> L >> R;
-	cout << primecount(L,R, arr) << endl;
-	cin >> num;
-	isPrime(num);
+  for (i = 2; i <= N; i++) {
+    if (lp[i] == 1) {
+        for (j = 1; j * i <= N; j++) {
+            if (lp[i*j] == 1) {
+                lp[i*j] = i;
+
+            }
+        }
+    }
+  }
+  cout << lp[N] << " " << lp[N-1];
 
 	return 0;
 }
