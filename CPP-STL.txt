@@ -1,0 +1,1 @@
+Array - In Array there is NO erase function.
