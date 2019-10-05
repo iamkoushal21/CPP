@@ -8,8 +8,14 @@ int main() {
   cin >> N;
   vector <int> v(N);
   iota(v.begin(), v.begin()+N, 1);
-  for (int i = 0; i < N; i++) {
-    cout << v[i] << " ";
+  // for (int i = 0; i < N; i++) {
+  //   cout << v[i] << " ";
+  // }
+  size = N;
+  for (i = 0; i < size; i++) {
+    if (i % 2 == 0) {
+      
+    }
   }
   return 0;
 }
