@@ -1,1 +1,4 @@
 Array - In Array there is NO erase function.
+Binary Search is applied where monotonic functionality is there. Like Increasing, decreasing, after one value everything is false, or True.
+Like- TTTTTTTFFFFFFFF, FFFFFFTTTTTTT
+
