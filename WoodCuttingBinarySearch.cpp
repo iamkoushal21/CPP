@@ -2,7 +2,8 @@
 using namespace std;
 
 bool predicate(int mid, int M, int N, int A[])
-{	int count = 0;
+{
+	int count = 0;
 	int i;
 	for (i = 0; i < N; i++) {
 		if (A[i] > mid) {
@@ -20,11 +21,12 @@ int main() {
 	int N;
 	int M;
 	int i;
+	cin >> N;
 	int A[N];
 	int low = 0;
 	int high = 1e9;
 	int mid;
-	cin >> N >> M;
+	cin >> M;
 	for (i = 0; i < N; i++) {
 		cin >> A[i];
 	}
