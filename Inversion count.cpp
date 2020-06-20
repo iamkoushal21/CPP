@@ -23,18 +23,19 @@ int main() {
 	cin >> T;
 	int inversion;
 	int key;
+	int *p = &inversion;
 	while (T--) {
-		inversion = 0;
+		*p = 0;
 		cin >> N;
 		v.resize(N,0);
 		for (i = 0; i < N; i++) {
 			cin >> key;
 			m.insert(key);
 			if (i != 0) {
-				inversion += distance(m.upper_bound(key), m.end());
+				*p += distance(m.upper_bound(key), m.end());
 			}
 		}
-		cout  << inversion;
+		cout  << *p;
 	}
 
 
